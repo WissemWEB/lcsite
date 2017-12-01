@@ -1,5 +1,54 @@
-@import "part1"
+// @import "part1"
+$primary-color: #00b0ad
+$black: black
+// $font-family: 
+
+*
+	margin: 0
+	padding: 0
+
+a
+	color: $primary-color
 
 body
-	background-color: pink
-	display: flex
+	color: #111
+
+.container
+	width: 1024px
+	margin: 0 auto
+
+#header
+	padding-top: 50px
+
+#header
+	.header-logo
+		height: 50px
+		background-color: $primary-color
+		background: url("../img/logo.png") no-repeat
+		background-size: contain
+
+#header nav
+	margin-top: 30px
+
+#header nav li
+	font-size: 16px
+	display: inline-block
+	// margin-right: 18px
+	padding-left: 9px
+	padding-right: 9px
+	list-style-type: none
+	border-right: 1px solid $primary-color
+	background-color: red
+	&:hover
+		background-color: $primary-color
+
+#header nav li:last-child
+	border-right: none
+
+#header nav li a
+	color: $black
+	text-decoration: none
+
+
+	
+	
