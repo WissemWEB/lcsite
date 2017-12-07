@@ -1,15 +1,23 @@
 $primary-color: #00b0ad
 $black: black
+$white: white
 
 @font-face
   font-family: 'geometria'
-  src: url(../fonts/Geometria.ttf)
-  src: url(../fonts/Geometria.eot)
-  src: url(../fonts/Geometria.woff)
+  src: url('../fonts/Geometria.ttf')
+  src: url('../fonts/Geometria.eot')
+  src: url('../fonts/Geometria.woff')
+
+@font-face 
+	font-family: 'Geometria Bold'
+	src: url('../fonts/Geometria-Bold.ttf')
+	src: url('../fonts/Geometria-Bold.eot')
+	src: url('../fonts/Geometria-Bold.woff')
 
 *
 	margin: 0
 	padding: 0
+	box-sizing: border-box
 
 a
 	color: $primary-color
@@ -23,7 +31,9 @@ body
 	font-family: Geometria, sans-serif
 	font-size: 14px
 	// background: url(/img/mood_animation.gif) no-repeat
+	// background: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Mood_animation.gif') no-repeat
 	background-size: 70%
+	color: $black
 
 .container
 	width: 1024px
@@ -34,63 +44,125 @@ body
 
 #header
 	// padding-top: 50px
-	margin-top: 50px
-	margin-bottom: 70px
+	// margin: 50px 0
 	.header-logo
 		height: 50px
 		background-color: $primary-color
 		background: url("../img/logo.png") no-repeat
 		background-size: contain
 
-#header nav
-	margin-top: 30px
-	font-size: 15px
-	& ul
+.header-wrapper
+	margin: 50px auto
+
+nav
+	margin-top: 40px
+	ul
 		list-style: none
-		margin: 0
 		padding: 0
-		& li
-			position: relative
-			display: inline-block
-			margin-right: -4px
-			text-align: center
-			&:last-child
-				& a
-					border-right: none
-			&:first-child
-				// border-left: 1px solid $primary-color
-			& a
-				display: block
-				padding-left: 5px
-				padding-right: 5px
-				color: black
-				text-decoration: none
-				border-right: 1px solid $primary-color
-				&:hover
-					background-color: $primary-color
-					color: white
-					transition: 0.3s
-			&:hover .ul-subnav
-				display: block
-				transition: 0.3s
-			& ul
-				display: none
-				position: absolute
-				top: 100%
-				left: 0
-				width: 170px
-				border-left: 1px solid $primary-color
-				margin-left: -0.5px
-				background: white
-				& li
-					width: 100%
-					margin: 0
-					text-align: left
-					& a
-						display: block
-						border: none
-						color: $black
-						font-size: 14px
+		// font-size: 15px
+	a
+		text-decoration: none
+		outline: none
+		display: block
+		transition: .2s ease-in-out
+		color: $black
+
+.topnav
+	// text-align: center
+	// width: 100%
+	// margin-bottom: 10px
+	>li
+		// text-transform: uppercase
+		display: inline-block
+		position: relative
+		border-right: 1px solid $primary-color
+		margin-right: -4px;
+		padding: 0 5px
+		font-size: 15px
+		&:last-child
+			border: none
+		&:hover
+			background: $primary-color
+			>a
+				color: $white
+			.subnav
+				// display: block
+				visibility: visible
+				opacity: 1
+				transform: scale(1)
+				transition: .4s ease-in-out
+				// transform: scale(1)
+
+.subnav
+	// margin-top: 20px
+	text-align: center
+	padding: 10px
+	width: 200px
+	margin-left: -100px
+	// display: none
+	visibility: hidden
+	background: $white
+	position: absolute
+	left: 50%
+	right: 50%
+	top: 100%
+	border: 1px solid #ededed
+	opacity: .2
+	transform: scale(.8)
+	>li
+		font-size: 14px
+		border-bottom: 1px solid #ededed
+		line-height: 2em
+		&:last-child
+			border: none
+		&:hover
+			background: $primary-color
+			transition: .4s ease-in-out
+			a
+				color: white
+
+// Main page content
+.main-page_content
+	h1
+		margin: 50px 0
+	h2
+		// margin 50px 0
+		margin: 50px 0
+		width: 70%
+	.desc
+		margin: 50px 0
+		width: 60%
+		font-size: 18px
+
+	.dwnlds
+		background-color: blue
+		.dwnlds-btn, .dwnlds-info
+			float: left
+			width: 400px
+
+
+
+		// vertical-align: middle
+		// div
+		// 	float: left
+		// 	// width: 460px
+		// .btn-dwnld
+		// 	color: $white
+		// 	a
+		// 		text-decoration: none
+		// 		font-weight: bold
+		// 		padding: 10px 20px
+		// 		font-size: 26px
+		// 		color: $white
+		// 		background-color: $primary-color
+		// 		border-radius: 2px
+		// 		&:hover
+		// 			background-color: darken($primary-color, 5%)
+		// 			transform: scale(.8)
+		// 			transition: .3s ease-in-out
+		
+
+
 
 
 	
