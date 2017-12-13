@@ -17,27 +17,36 @@ $white: white
 *
 	margin: 0
 	padding: 0
-	box-sizing: border-box
+	// box-sizing: border-box
 
 a
 	color: $primary-color
 h1
 	font-size: 46px
+
 h2
+	font-size: 32px
+
+h3
 	font-size: 30px
 
 body
 	color: #111
 	font-family: Geometria, sans-serif
 	font-size: 14px
-	// background: url(/img/mood_animation.gif) no-repeat
+	background: url(/img/mood_animation_0115s_delay.gif) no-repeat
+	background-position: 95% 15%
 	// background: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Mood_animation.gif') no-repeat
 	background-size: 70%
 	color: $black
 
 .container
-	width: 1024px
+	// width: 1024px
+	max-width: 1170px;
+	width: 100%
 	margin: 0 auto
+	padding: 0 15px
+	box-sizing: border-box
 
 .clearfix
 	clear: both
@@ -77,7 +86,7 @@ nav
 		position: relative
 		border-right: 1px solid $primary-color
 		margin-right: -4px;
-		padding: 0 5px
+		padding: 0 10px
 		font-size: 15px
 		&:last-child
 			border: none
@@ -130,37 +139,151 @@ nav
 		margin: 50px 0
 		width: 70%
 	.desc
-		margin: 50px 0
+		margin: 50px 0 25px
 		width: 60%
 		font-size: 18px
 
-	.dwnlds
-		background-color: blue
-		.dwnlds-btn, .dwnlds-info
-			float: left
-			width: 400px
+.partners
+	margin-bottom: 50px
+	p
+		font-size: 20px
+		font-weight: 	bold
+	.partners-logos
+		margin-left: -25px
+		.logo1, .logo2
+			background-color: $primary-color
+			height: 70px	
+			display: inline-block
+			margin-right: 40px
+			min-width: 262px
+			&:hover
+				// opacity: .7
+				transform: scale(1.1)
+				transition: .3s ease-in-out
+			a
+				display: block
+				width: 100%
+				height: 100%
+		.logo1
+			background: url("../img/key_preclinicals.png") no-repeat
+			background-size: contain
+		.logo2
+			background: url("../img/spectrum_info.png") no-repeat
+			background-size: contain
 
 
 
-		// vertical-align: middle
-		// div
-		// 	float: left
-		// 	// width: 460px
-		// .btn-dwnld
-		// 	color: $white
-		// 	a
-		// 		text-decoration: none
-		// 		font-weight: bold
-		// 		padding: 10px 20px
-		// 		font-size: 26px
-		// 		color: $white
-		// 		background-color: $primary-color
-		// 		border-radius: 2px
-		// 		&:hover
-		// 			background-color: darken($primary-color, 5%)
-		// 			transform: scale(.8)
-		// 			transition: .3s ease-in-out
-		
+
+		/* .logo1
+			background: */
+
+
+.dwnlds
+	.dwnlds-btn, .dwnlds-info
+		float: left
+		width: 550px
+		height: 60px
+	.dwnlds-info
+		font-size: 16px
+	.dwnlds-btn
+		font-size: 26px
+		margin-right: 40px
+		background-color: $primary-color
+		text-align: center
+		font-weight: bold
+		border-radius: 3px
+		a
+			display: block
+			color: white
+			width: 100%
+			height: 100%
+			text-decoration: none
+			padding-top: 12px
+		&:hover
+			background-color: darken($primary-color, 5%)
+			// transform: scale(0.95)
+			transition: 0.3s ease-in-out
+
+.bb-shop-link
+	// font-weight: bold
+	font-size: 30px
+	display: block
+	color: $black
+	font-weight: bold
+	margin-bottom: 40px
+
+/* Latest News */
+
+.latest-news
+	h3
+		font-weight: bold
+		margin-top: 40px
+		margin-bottom: 25px
+	.latest-news-item
+		display: inline-block
+		width: 255px
+		margin-left: 40px
+		margin-right: -4px
+		// margin-right: -4px
+		&:first-child
+			margin-left: 0px
+		.latest-news-item-date
+			margin-bottom: 10px
+			font-style: italic
+			font-weight: bold
+	.latest-news-wrapper
+		.latest-news-btn
+			margin: 40px auto
+			height: 50px
+			width: 255px
+			background-color: $primary-color
+			border-radius: 3px
+			a
+				display: block
+				width: 100%
+				height: 100%
+				text-decoration: none
+				color: $white
+				text-align: center
+				font-weight: bold
+				font-size: 20px
+				padding-top: 10px
+			&:hover
+				background-color: darken($primary-color, 5%)
+				transition: 0.3s ease-in-out
+
+/* Footer */
+#footer
+	font-size: 13px
+	margin-bottom: 20px
+.footer-line
+	width: 100%
+	height: 1px
+	background-color: $black
+	margin-bottom: 20px
+.footer1, .footer2, .footer3
+	display: inline-block
+	margin-left: 40px
+	margin-right: -4px
+
+.footer1, .footer2
+	width: 255px
+.footer3
+	width: 550px
+
+.footer-wrapper
+	>div:first-child
+		margin-left: 0
+
+
+
+
+
+
+
+
+
+
 
 
 
