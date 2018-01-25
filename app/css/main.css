@@ -14,6 +14,10 @@
   margin: 0;
   padding: 0; }
 
+html {
+  background: url(/img/bg/test_4.png);
+  background-repeat: repeat; }
+
 a {
   color: #00b0ad; }
 
@@ -29,16 +33,14 @@ h3 {
 body {
   color: #111;
   font-family: Geometria, sans-serif;
-  font-size: 14px;
-  background: url(/img/mood_animation_0115s_delay.gif) no-repeat;
-  background-position: 95% 15%;
-  -webkit-background-size: 70% 70%;
-          background-size: 70%;
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
   color: black; }
 
 .container {
-  max-width: 1170px;
-  width: 100%;
+  width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
   -webkit-box-sizing: border-box;
@@ -48,17 +50,56 @@ body {
   clear: both; }
 
 #header .header-logo {
+  float: left;
+  min-width: 250px;
   height: 50px;
   background-color: #00b0ad;
   background: url("../img/logo.png") no-repeat;
   -webkit-background-size: contain;
           background-size: contain; }
 
+#header .partners {
+  float: left; }
+  #header .partners .logo1, #header .partners .logo2 {
+    background-color: #00b0ad;
+    height: 40px;
+    float: left;
+    min-width: 150px; }
+    #header .partners .logo1:hover, #header .partners .logo2:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: .3s ease-in-out;
+      -o-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+    #header .partners .logo1 a, #header .partners .logo2 a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  #header .partners .logo1 {
+    background: url("../img/key_preclinicals.png") no-repeat;
+    -webkit-background-size: contain;
+            background-size: contain; }
+  #header .partners .logo2 {
+    background: url("../img/spectrum_info.png") no-repeat;
+    -webkit-background-size: contain;
+            background-size: contain; }
+
+#header .tagline {
+  float: left;
+  margin-left: 450px;
+  color: #00b0ad;
+  font-weight: bold; }
+  #header .tagline h2 {
+    font-size: 24px; }
+
 .header-wrapper {
-  margin: 50px auto; }
+  margin: 50px auto 30px; }
 
 nav {
-  margin-top: 40px; }
+  margin-top: 40px;
+  width: 100%;
+  text-align: center; }
   nav ul {
     list-style: none;
     padding: 0; }
@@ -77,9 +118,12 @@ nav {
   border-right: 1px solid #00b0ad;
   margin-right: -4px;
   padding: 0 10px;
-  font-size: 15px; }
+  font-size: 16px; }
+  .topnav > li:first-child {
+    padding-left: 0px; }
   .topnav > li:last-child {
-    border: none; }
+    border: none;
+    padding-right: 0px; }
   .topnav > li:hover {
     background: #00b0ad; }
     .topnav > li:hover > a {
@@ -124,81 +168,65 @@ nav {
       .subnav > li:hover a {
         color: white; }
 
-.main-page_content h1 {
-  margin: 50px 0; }
+.main-page_content {
+  background: url(/img/mood_animation_0115s_delay_wo_bg_last_1.gif) no-repeat;
+  background-position: 90% 0%;
+  -webkit-background-size: 28% 28%;
+          background-size: 28%; }
+  .main-page_content h2 {
+    margin-top: 50px;
+    width: 70%; }
+  .main-page_content .desc {
+    margin: 50px 0 100px;
+    width: 700px;
+    font-size: 18px; }
 
-.main-page_content h2 {
-  margin: 50px 0;
-  width: 70%; }
-
-.main-page_content .desc {
-  margin: 50px 0 25px;
-  width: 60%;
-  font-size: 18px; }
-
-.partners {
-  margin-bottom: 50px; }
-  .partners p {
-    font-size: 20px;
-    font-weight: bold; }
-  .partners .partners-logos {
-    margin-left: -25px;
-    /* .logo1
-			background: */ }
-    .partners .partners-logos .logo1, .partners .partners-logos .logo2 {
-      background-color: #00b0ad;
-      height: 70px;
-      display: inline-block;
-      margin-right: 40px;
-      min-width: 262px; }
-      .partners .partners-logos .logo1:hover, .partners .partners-logos .logo2:hover {
-        -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-                transform: scale(1.1);
-        -webkit-transition: .3s ease-in-out;
-        -o-transition: .3s ease-in-out;
-        transition: .3s ease-in-out; }
-      .partners .partners-logos .logo1 a, .partners .partners-logos .logo2 a {
-        display: block;
-        width: 100%;
-        height: 100%; }
-    .partners .partners-logos .logo1 {
-      background: url("../img/key_preclinicals.png") no-repeat;
-      -webkit-background-size: contain;
-              background-size: contain; }
-    .partners .partners-logos .logo2 {
-      background: url("../img/spectrum_info.png") no-repeat;
-      -webkit-background-size: contain;
-              background-size: contain; }
-
-.dwnlds .dwnlds-btn, .dwnlds .dwnlds-info {
-  float: left;
-  width: 550px;
-  height: 60px; }
-
-.dwnlds .dwnlds-info {
-  font-size: 16px; }
-
-.dwnlds .dwnlds-btn {
-  font-size: 26px;
-  margin-right: 40px;
-  background-color: #00b0ad;
-  text-align: center;
-  font-weight: bold;
-  -webkit-border-radius: 3px;
-          border-radius: 3px; }
-  .dwnlds .dwnlds-btn a {
-    display: block;
-    color: white;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    padding-top: 12px; }
-  .dwnlds .dwnlds-btn:hover {
-    background-color: #009794;
-    -webkit-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
+/* .partners
+	margin-bottom: 50px
+	p
+		font-size: 20px
+		font-weight: 	bold
+	.partners-logos
+		margin-left: -25px
+		.logo1, .logo2
+			background-color: $primary-color
+			height: 70px
+			display: inline-block
+			margin-right: 40px
+			min-width: 262px
+			&:hover */
+.dwnlds {
+  margin-top: 100px; }
+  .dwnlds .dwnlds-info {
+    width: 550px;
+    float: none;
+    font-size: 16px;
+    margin-bottom: 30px; }
+  .dwnlds .dwnlds-btn {
+    float: left;
+    width: 550px;
+    height: 50px;
+    font-size: 26px;
+    margin-right: 30px;
+    background-color: #00b0ad;
+    text-align: center;
+    font-weight: bold;
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
+    .dwnlds .dwnlds-btn:last-child {
+      margin-right: 0; }
+    .dwnlds .dwnlds-btn a {
+      display: block;
+      color: white;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      padding-top: 6px; }
+    .dwnlds .dwnlds-btn:hover {
+      background-color: #009794;
+      -webkit-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
 
 .bb-shop-link {
   font-size: 30px;
@@ -215,8 +243,8 @@ nav {
 
 .latest-news .latest-news-item {
   display: inline-block;
-  width: 255px;
-  margin-left: 40px;
+  width: 263px;
+  margin-left: 30px;
   margin-right: -4px; }
   .latest-news .latest-news-item:first-child {
     margin-left: 0px; }
@@ -224,11 +252,16 @@ nav {
     margin-bottom: 10px;
     font-style: italic;
     font-weight: bold; }
+  .latest-news .latest-news-item .latest-news-item-title {
+    font-weight: bold;
+    margin-bottom: 5px; }
+  .latest-news .latest-news-item .latest-news-item-text {
+    font-size: 14px; }
 
 .latest-news .latest-news-wrapper .latest-news-btn {
   margin: 40px auto;
   height: 50px;
-  width: 255px;
+  width: 275px;
   background-color: #00b0ad;
   -webkit-border-radius: 3px;
           border-radius: 3px; }
@@ -259,16 +292,28 @@ nav {
   background-color: black;
   margin-bottom: 20px; }
 
-.footer1, .footer2, .footer3 {
+.footer1, .footer2, .footer3, .footer4 {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 30px;
   margin-right: -4px; }
 
 .footer1, .footer2 {
-  width: 255px; }
+  width: 263px; }
 
 .footer3 {
-  width: 550px; }
+  width: 362px; }
+
+.footer4 {
+  width: 165px;
+  text-align: right;
+  font-size: 32px;
+  color: grey; }
+  .footer4 .fa:hover {
+    color: #00b0ad;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    cursor: pointer; }
 
 .footer-wrapper > div:first-child {
   margin-left: 0; }

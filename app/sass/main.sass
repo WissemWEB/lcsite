@@ -18,7 +18,9 @@ $white: white
 	margin: 0
 	padding: 0
 	// box-sizing: border-box
-
+html
+	background: url(/img/bg/test_4.png)
+	background-repeat: repeat
 a
 	color: $primary-color
 h1
@@ -33,17 +35,28 @@ h3
 body
 	color: #111
 	font-family: Geometria, sans-serif
-	font-size: 14px
-	background: url(/img/mood_animation_0115s_delay.gif) no-repeat
-	background-position: 95% 15%
+	font-size: 16px
+	font-weight: 300
+
+	-webkit-font-smoothing: antialiased
+	-webkit-overflow-scrolling: touch
+
+	// background: url(/img/mood_animation_0115s_delay.gif) no-repeat
+	// background: url(/img/mood_animation_0115s_delay_wo_bg_last.gif) no-repeat
+	// background-repeat: repeat
+	// background-position: 95% 15%
 	// background: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Mood_animation.gif') no-repeat
-	background-size: 70%
+	// background-size: 20%
+	// background: url(/img/bg/body_bg.png) no-repeat
+	// background-position: 70% 20%
+	// background-size: 20%
 	color: $black
 
 .container
 	// width: 1024px
-	max-width: 1170px;
-	width: 100%
+	// max-width: 1170px;
+	width: 1170px
+	// width: 100%
 	margin: 0 auto
 	padding: 0 15px
 	box-sizing: border-box
@@ -55,16 +68,56 @@ body
 	// padding-top: 50px
 	// margin: 50px 0
 	.header-logo
+		float: left
+		min-width: 250px
 		height: 50px
+		// margin-right: 250px
 		background-color: $primary-color
 		background: url("../img/logo.png") no-repeat
 		background-size: contain
+	.partners
+		float: left
+		// min-width: 400px
+		.logo1, .logo2
+			background-color: $primary-color
+			height: 40px
+			float: left
+			// display: inline-block
+			// margin-right: 40px
+			min-width: 150px
+			&:hover
+				// opacity: .7
+				transform: scale(1.1)
+				transition: .3s ease-in-out
+			a
+				display: block
+				width: 100%
+				height: 100%
+		.logo1
+			background: url("../img/key_preclinicals.png") no-repeat
+			background-size: contain
+		.logo2
+			background: url("../img/spectrum_info.png") no-repeat
+			background-size: contain
+
+	.tagline
+		float: left
+		margin-left: 450px
+		color: $primary-color
+		font-weight: bold
+		h2
+			font-size: 24px
+
+
+				
 
 .header-wrapper
-	margin: 50px auto
+	margin: 50px auto 30px
 
 nav
 	margin-top: 40px
+	width: 100%
+	text-align: center
 	ul
 		list-style: none
 		padding: 0
@@ -85,11 +138,14 @@ nav
 		display: inline-block
 		position: relative
 		border-right: 1px solid $primary-color
-		margin-right: -4px;
+		margin-right: -4px
 		padding: 0 10px
-		font-size: 15px
+		font-size: 16px
+		&:first-child
+			padding-left: 0px
 		&:last-child
 			border: none
+			padding-right: 0px
 		&:hover
 			background: $primary-color
 			>a
@@ -132,18 +188,20 @@ nav
 
 // Main page content
 .main-page_content
-	h1
-		margin: 50px 0
+	background: url(/img/mood_animation_0115s_delay_wo_bg_last_1.gif) no-repeat
+	background-position: 90% 0%
+	background-size: 28%
 	h2
+		margin-top: 50px
 		// margin 50px 0
-		margin: 50px 0
+		// margin: 0px 10px
 		width: 70%
 	.desc
-		margin: 50px 0 25px
-		width: 60%
+		margin: 50px 0 100px
+		width: 700px
 		font-size: 18px
 
-.partners
+/* .partners
 	margin-bottom: 50px
 	p
 		font-size: 20px
@@ -169,36 +227,34 @@ nav
 			background-size: contain
 		.logo2
 			background: url("../img/spectrum_info.png") no-repeat
-			background-size: contain
-
-
-
-
-		/* .logo1
-			background: */
-
+			background-size: contain */
 
 .dwnlds
-	.dwnlds-btn, .dwnlds-info
+	margin-top: 100px
+	.dwnlds-info
+		width: 550px
+		float: none
+		font-size: 16px
+		margin-bottom: 30px
+	.dwnlds-btn
 		float: left
 		width: 550px
-		height: 60px
-	.dwnlds-info
-		font-size: 16px
-	.dwnlds-btn
+		height: 50px
 		font-size: 26px
-		margin-right: 40px
+		margin-right: 30px
 		background-color: $primary-color
 		text-align: center
 		font-weight: bold
 		border-radius: 3px
+		&:last-child
+			margin-right: 0
 		a
 			display: block
 			color: white
 			width: 100%
 			height: 100%
 			text-decoration: none
-			padding-top: 12px
+			padding-top: 6px
 		&:hover
 			background-color: darken($primary-color, 5%)
 			// transform: scale(0.95)
@@ -221,8 +277,8 @@ nav
 		margin-bottom: 25px
 	.latest-news-item
 		display: inline-block
-		width: 255px
-		margin-left: 40px
+		width: 263px
+		margin-left: 30px
 		margin-right: -4px
 		// margin-right: -4px
 		&:first-child
@@ -231,11 +287,17 @@ nav
 			margin-bottom: 10px
 			font-style: italic
 			font-weight: bold
+		.latest-news-item-title
+				font-weight: bold
+				margin-bottom: 5px
+		.latest-news-item-text
+				font-size: 14px
+
 	.latest-news-wrapper
 		.latest-news-btn
 			margin: 40px auto
 			height: 50px
-			width: 255px
+			width: 275px
 			background-color: $primary-color
 			border-radius: 3px
 			a
@@ -261,15 +323,24 @@ nav
 	height: 1px
 	background-color: $black
 	margin-bottom: 20px
-.footer1, .footer2, .footer3
+.footer1, .footer2, .footer3, .footer4
 	display: inline-block
-	margin-left: 40px
+	margin-left: 30px
 	margin-right: -4px
 
 .footer1, .footer2
-	width: 255px
+	width: 263px
 .footer3
-	width: 550px
+	width: 362px
+.footer4
+	width: 165px
+	text-align: right
+	font-size: 32px
+	color: grey
+	.fa:hover
+		color: $primary-color
+		transition: .3s ease-in-out
+		cursor: pointer
 
 .footer-wrapper
 	>div:first-child
